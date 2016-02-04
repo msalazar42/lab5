@@ -22,14 +22,16 @@
 
 <body>
 <div class="container">
-	<h1>My HCI Friends</h1>
+	<a href="/" class="heading">
+	    <h1>My HCI Friends</h1>
+	</a>
 
 	{{#each friends}}
     <div class="friend" id="{{id}}">
 		<img src="{{imageURL}}" class="img-responsive img-rounded">
-		<h3>
-		    <a href="#" class="nameclick">{{name}}</a>
-		</h3>
+		<a href="#" class="nameclick">
+			<h3>{{name}}</h3>
+		</a>
 		<p>{{description}}</p>
 	</div>
 	{{/each}} 
@@ -47,10 +49,5 @@
 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
 	</form>
 </div>
-<script> $(".nameclick").click(function(e){
-		e.preventDefault();
-		$(this).text(anagrammedName($(this).text()));
-});
-</script>
 </body>
 </html>
